@@ -1,12 +1,15 @@
 import java.awt.*;
 import java.util.*;
 
+import pixLab.classes.Pixel;
+
 public class SandLab
 {
   //Step 4,6
   //add constants for particle types here
   public static final int EMPTY = 0;
   public static final int METAL = 1;
+  public static final int SAND = 2;
   
   //do not add any more fields below
   private int[][] grid;
@@ -27,9 +30,10 @@ public class SandLab
     // Each value needs a name for the button
     names[EMPTY] = "Empty";
     names[METAL] = "Metal";
+    names[SAND] = "Sand";
     
     //1. Add code to initialize the data member grid with same dimensions
-    
+    grid = new int[50][50];
     
     display = new SandDisplay("Falling Sand", numRows, numCols, names);
   }
@@ -38,7 +42,7 @@ public class SandLab
   private void locationClicked(int row, int col, int tool)
   {
     //2. Assign the values associated with the parameters to the grid
-   
+     int grid, subRow, subCol = tool;
   }
 
   //copies each element of grid into the display
@@ -46,7 +50,24 @@ public class SandLab
   {
       //Step 3
    //Hint - use a nested for loop
-    
+	  for (int row = 0; row < grid.length ; row++)
+	  {
+    			for(int col = 0; col < grid[0].length ; col++)
+    			{
+    				if ()
+    				{
+    					
+    				}
+    				else if ()
+    				{
+    					
+    				}
+    				else
+    				{
+    					
+    				}
+    			}
+	  }
   }
 
   //Step 5,7
@@ -59,8 +80,9 @@ public class SandLab
     //int someRandom = (int) (Math.random() * scalar)
     //remember that you need to watch for the edges of the array
     
+    int randRow = (int) (Math.random() * (grid.length));
+    int randCol = (int) (Math.random() * (grid[0].length));
     
-  }
   
   //do not modify this method!
   public void run()
